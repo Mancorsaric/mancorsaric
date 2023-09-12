@@ -22,8 +22,8 @@ export const MainRouter = () => {
         <Route path="noticias" element={<Noticias />}></Route>
         <Route path="contacto" element={<Contacto />}></Route>
         <Route path="recursos" element={<Recursos />}></Route>
-        <Route path="oficios" element={<Oficios />}></Route>
-        <Route path="gestores" element={<Gestores />}></Route>
+        <Route path="convenios" element={<Oficios />}></Route>
+        <Route path="actores" element={<Gestores />}></Route>
         <Route path="login" element={<Login />}></Route>
         <Route path="publicar" element={<Publicar />}></Route>
         <Route path="admin/config" element={<Configuraciones />}></Route>

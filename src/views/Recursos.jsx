@@ -1,6 +1,5 @@
 import { Button, Col, Row, Container, Image, Modal, Tab, Tabs } from "react-bootstrap";
 import banner from '../assets/images/bannerRecursos.jpg'
-//import { mockImagenes } from "../services/mock-service.js";
 import { ContainerDocumentos } from "../components/ContainerDocumentos.jsx";
 import { useContext, useEffect, useState } from "react";
 import { SubirArchivo } from "./SubirArchivo.jsx";
@@ -13,7 +12,6 @@ import { PaginacionRecursos } from "../components/PaginacionRecursos.jsx";
 import { RefetchContext } from "../contexts/RefetchContext.js";
 import { GridPlaceholderDocumentos } from "../components/GridPlaceholderDocumentos.jsx";
 import { BarraBuscarRecursos } from "../components/BarraBuscarRecursos";
-import { BarraFiltrosOficios } from "../components/BarraFiltrosOficios";
 
 export const Recursos = () => {
   useTitle("Recursos");
@@ -81,7 +79,6 @@ export const Recursos = () => {
               </div>
             }
             <BarraBuscarRecursos setDocumentos={setData} setImagenes={setDataImages}/>
-            <BarraFiltrosOficios/>
           </Col>
           <Col lg={9}>
             <Container>

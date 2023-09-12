@@ -74,17 +74,12 @@ export const Noticia = ({noticia, isModal = false}) => {
         <Row onClick={handleShowVista}>
           <Col sm={8}>
             <div className="h-100 d-flex align-items-center">
-              <Departamento key={noticia._id} nombre={noticia.departamento.nombre} urlLogo={noticia.departamento.urlLogo}/>
+              <Departamento key={noticia._id} nombre={noticia.departamento.nombre}/>
             </div>
           </Col>
           <Col sm={4}>
             <div className="d-flex flex-column align-items-end">
-              <h6>Santa Rosa</h6>
               <h6>{getDateString(noticia.fechaPublicacion)}</h6>
-              {
-                valid &&
-                <h6>Publicado por: Rafa</h6>
-              }
             </div>
           </Col>
         </Row>

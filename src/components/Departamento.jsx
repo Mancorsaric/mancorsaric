@@ -1,9 +1,8 @@
 import React from 'react'
 
-export const Departamento = ({nombre, urlLogo}) => {
+export const Departamento = ({nombre}) => {
   return (
     <div className="departamento">
-      <img className='icon-departamento' src={urlLogo} alt={"logo" + nombre} />
       <p>{nombre}</p>
     </div>
   )

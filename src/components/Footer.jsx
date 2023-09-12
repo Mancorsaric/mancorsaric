@@ -21,7 +21,7 @@ export const Footer = () => {
     <>
     <footer
           className="text-center text-lg-start text-white mt-5"
-          style={{backgroundColor: "var(--mp-azul-3)"}}
+          style={{backgroundColor: "var(--palette-green-light)"}}
           >
     <div className="container p-4 pb-0">
       <div className="">
@@ -71,37 +71,30 @@ export const Footer = () => {
             <h6 className="text-uppercase mb-4 font-weight-bold">Nuestras Redes</h6>
 
             <a
-               className="btn btn-primary btn-floating m-1"
-               style={{backgroundColor: "#3b5998"}}
-               href="#!"
-               role="button"
-               ><i className="fab fa-facebook-f"></i
+              className="btn btn-primary btn-floating m-1"
+              style={{backgroundColor: "#3b5998"}}
+              href="https://www.facebook.com/profile.php?id=100070169079062"
+              role="button"
+              ><i className="fab fa-facebook-f"></i
               ></a>
 
             <a
-               className="btn btn-primary btn-floating m-1"
-               style={{backgroundColor: "#55acee"}}
-               href="#!"
-               role="button"
-               ><i className="fab fa-twitter"></i
+              className="btn btn-primary btn-floating m-1"
+              style={{backgroundColor: "#55acee"}}
+              href="https://twitter.com/MANCORSARIC"
+              role="button"
+              ><i className="fab fa-twitter"></i
               ></a>
 
             <a
-               className="btn btn-primary btn-floating m-1"
-               style={{backgroundColor: "#dd4b39"}}
-               href="#!"
-               role="button"
-               ><i className="fab fa-google"></i
+              className="btn btn-primary btn-floating m-1"
+              style={{backgroundColor: "#dd4b39"}}
+              href="https://www.youtube.com/c/MANCORSARICMancomunidaddelaRutaMaya"
+              role="button"
+              ><i className="fa fa-youtube-play"></i
               ></a>
 
-            <a
-               className="btn btn-primary btn-floating m-1"
-               style={{backgroundColor: "#ac2bac"}}
-               href="#!"
-               role="button"
-               ><i className="fab fa-instagram"></i
-              ></a>
-              <div>
+            <div>
             <Button variant="warning" onClick={handleShow}>
               <i className="bi bi-tools"></i>{' '}Modificar
             </Button> 
@@ -111,9 +104,9 @@ export const Footer = () => {
       </div>
     </div>
     <div
-         className="text-center p-3"
-         style={{backgroundColor: "var(--mp-rojo-1)"}}
-         >
+        className="text-center p-3"
+        style={{backgroundColor: "var(--palette-green-dark)"}}
+    >
       © 2023 Copyright:
       <br /><a className="text-white" href={values.footerEnlace}>{values.subtitulo}
       </a>

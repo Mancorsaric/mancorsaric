@@ -42,7 +42,7 @@ section:first-child{
 }
 
 .nosotros-container{
-  background-color: var(--mp-gris-5);
+  background-color: var(--palette-yellow-light);
 }
 
 .text-nosotros{
@@ -65,12 +65,12 @@ section:first-child{
 }
 
 .item{
-  background-color: var(--mp-azul-5);
+  background-color: var(--palette-yellow-light);
   transition: 0.2s ease-in-out;
 }
 
 .item:hover{
-  background-color: var(--mp-azul-3);
+  background-color: var(--palette-yellow-dark);
 }
 
 h3{
@@ -82,7 +82,7 @@ h3{
 }
 
 .icon{
-  background-color: var(--mp-azul-6);
+  background-color: var(--palette-green-light);
   display: flex;
   justify-content: center;
   border-radius: 10px;

@@ -1,19 +1,24 @@
 import { Layout } from "./Layout.jsx";
 import { Button, Card, Col, Container, Image, Row, Modal } from "react-bootstrap";
-import fondo from "../assets/images/fondo-main.jpg"
-import organigrama from "../assets/images/organigrama.jpg"
-import lider from "../assets/images/img-lider.jpg"
-import nosotros from "../assets/images/img-nosotros.jpg"
-import data from "../data/info-pagina.json"; 
-import '../assets/styles/home.css';
 import { useContext, useEffect, useState } from "react";
 import { UserContext } from "../contexts/UserContext.js";
 import { Configuracion } from "./Configuracion.jsx";
-import useFetch from "../hooks/useFetch.js";
 import { LoadingScreen } from "./LoadingScreen.jsx";
 import { FrameCambiarImagen } from "../components/FrameCambiarImagen.jsx";
 import { ConfiguracionValores } from "./ConfiguracionValores.jsx";
 import { BotonCambiarBanner } from "../components/BotonCambiarBanner.jsx";
+import useFetch from "../hooks/useFetch.js";
+import fondo from "../assets/images/fondo-main.jpg"
+import organigrama from "../assets/images/organigrama.png"
+import cobertura from "../assets/images/cobertura.jpg"
+import lider from "../assets/images/img-lider.jpg"
+import nosotros from "../assets/images/img-nosotros.jpg" 
+import logoCR from "../assets/images/logo-cr.jpg" 
+import logoC from "../assets/images/logo-c.jpg" 
+import logoSR from "../assets/images/logo-sr.png" 
+import logoSJ from "../assets/images/logo-sj.jpg" 
+import '../assets/styles/home.css';
+import { EscudoMunicipal } from "../components/multimedia/EscudoMunicipal.jsx";
 
 export const Home = () => {
   const {valid, userData} = useContext(UserContext);
@@ -42,7 +47,7 @@ export const Home = () => {
 
   return(
     <>
-    <Layout pagina={data.area}>
+    <Layout pagina={'Inicio'}>
       <BotonCambiarBanner show={(valid && userData.rol !== 'Publish')} />
       <Container>
         <section>
@@ -75,7 +80,7 @@ export const Home = () => {
               </Col>
             </Row>
 
-            <Row>
+            {/*<Row>
               <Col md={9}>
                 <blockquote className="text-fundador">
                   {values.mensaje}
@@ -89,9 +94,46 @@ export const Home = () => {
                   <Image id="img-about" src={lider} fluid roundedCircle/>
                 </FrameCambiarImagen>
               </Col>
-            </Row>
+            </Row>*/}
             </Card.Body>
           </Card>
+        </section>
+
+        <section className="municipios" id="municipios">
+          <h2 className="sub-title">Municipios</h2>
+          <div className="media-container d-flex flex-wrap">
+            <FrameCambiarImagen show={valid}>
+              <EscudoMunicipal 
+                image={logoCR} 
+                name={'Copán Ruinas'} 
+                url={'https://www.facebook.com/municipalidadcopanruinas'}
+              />
+            </FrameCambiarImagen>
+
+            <FrameCambiarImagen show={valid}>
+              <EscudoMunicipal 
+                image={logoSR} 
+                name={'Santa Rita'} 
+                url={'https://www.facebook.com/profile.php?id=100085319175388'}
+              />
+            </FrameCambiarImagen>
+
+            <FrameCambiarImagen show={valid}>
+              <EscudoMunicipal 
+                image={logoC} 
+                name={'Cabañas'} 
+                url={'https://www.facebook.com/profile.php?id=100083162807277'}
+              />
+            </FrameCambiarImagen>
+            
+            <FrameCambiarImagen show={valid}>
+              <EscudoMunicipal 
+                image={logoSJ} 
+                name={'San Jerónimo'} 
+                url={'https://www.facebook.com/mumisjc'}
+              />
+            </FrameCambiarImagen>
+          </div>
         </section>
 
         <section className="mision-vision" id="mision-vision">
@@ -158,8 +200,9 @@ export const Home = () => {
         <section className="cobertura" id="cobertura">
           <h2 className="sub-title">Cobertura</h2>
           <div className="media-container">
-            <iframe title={values.departamento} src={values.urlMapa} 
-            width="600" height="480"></iframe>
+            <FrameCambiarImagen show={valid}>
+              <Image src={cobertura} fluid thumbnail/>
+            </FrameCambiarImagen>
           </div>
         </section>
       </Container>

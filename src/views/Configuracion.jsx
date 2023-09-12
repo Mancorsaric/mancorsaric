@@ -8,8 +8,12 @@ export const Configuracion = ({data, handleClose=null}) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     await updateGeneralConfig(values)
-    if(!handleClose) window.location.reload();
-    handleClose()
+    if(handleClose !== null){
+      handleClose()
+    }
+    else{
+      window.location.reload();
+    }
   };
 
   return (

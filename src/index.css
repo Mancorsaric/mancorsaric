@@ -22,6 +22,11 @@
   --mp-rojo-4: #FCA18F;
   --mp-rojo-5: #FEBAAB;
   --mp-rojo-6: #FCD5C8;
+
+  --palette-yellow-light: #FFEF82;
+  --palette-yellow-dark: #EFD345;
+  --palette-green-light: #BABD42;
+  --palette-green-dark: #82954B;
 }
 
 *{
@@ -51,5 +56,5 @@
 }
 
 .nav-link.active{
-  background-color: var(--mp-azul-4);
+  background-color: var(--palette-green-light);
 }
