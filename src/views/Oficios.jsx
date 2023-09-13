@@ -1,11 +1,10 @@
-import { Button, Col, Image, Modal, Row } from "react-bootstrap";
+import { Button, Image, Modal } from "react-bootstrap";
 import { Layout } from "./Layout.jsx";
 import banner from "../assets/images/bannerOficios.jpg"
 import '../assets/styles/contacto.css'
 import { useContext, useState } from "react";
 import { UserContext } from "../contexts/UserContext.js";
 import { PublicarOficio } from "./PublicarOficio.jsx";
-import { BarraFiltrosOficios } from "../components/BarraFiltrosOficios.jsx";
 
 export const Oficios = () => {
   const {valid} = useContext(UserContext);
@@ -27,11 +26,6 @@ export const Oficios = () => {
         </Button>
         : ''
       }
-      <Row>
-        <Col sm={3}>
-          <BarraFiltrosOficios/>
-        </Col>
-      </Row>
       <Modal show={show} onHide={handleClose}>
         <PublicarOficio handleClose={handleClose}/>
       </Modal>          

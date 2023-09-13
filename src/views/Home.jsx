@@ -11,7 +11,6 @@ import useFetch from "../hooks/useFetch.js";
 import fondo from "../assets/images/fondo-main.jpg"
 import organigrama from "../assets/images/organigrama.png"
 import cobertura from "../assets/images/cobertura.jpg"
-import lider from "../assets/images/img-lider.jpg"
 import nosotros from "../assets/images/img-nosotros.jpg" 
 import logoCR from "../assets/images/logo-cr.jpg" 
 import logoC from "../assets/images/logo-c.jpg" 

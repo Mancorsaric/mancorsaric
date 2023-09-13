@@ -1,12 +1,10 @@
 import useFetch from "../hooks/useFetch.js";
-//import { mockDepartamentos } from "../services/mock-service.js";
 import useForm from "../hooks/useForm.js";
 import { sendNoticia } from "../services/noticias-service.js";
 import { Button, Card, FloatingLabel, Form, Spinner } from 'react-bootstrap';
 import { useContext, useEffect, useState } from "react";
 import { RefetchContext } from "../contexts/RefetchContext.js";
 import { ToastContext } from "../contexts/ToastContext.js";
-import dataMunicipios from "../data/municipios.json";
 
 export const Publicar = ({handleClose}) => {
 
@@ -74,18 +72,7 @@ export const Publicar = ({handleClose}) => {
             </Form.Select>
           </FloatingLabel>
         </Form.Group>
-        <Form.Group className="mb-3">
-          <FloatingLabel label="Municipio">
-            <Form.Select aria-label="Select Municipio"  id="municipio" name="municipio">
-              <option>Seleccione un Municipio</option>
-              {
-                dataMunicipios.municipios.map((municipio, index) => (
-                  <option value={index}>{municipio}</option>
-                ))
-              }
-            </Form.Select>
-          </FloatingLabel>
-        </Form.Group>
+
         <Form.Group className="mb-3">
           <FloatingLabel label="Contenido">
             <Form.Control
